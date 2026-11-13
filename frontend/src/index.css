@@ -1,0 +1,123 @@
+/* Pensado para tela de celular: uma coluna, campos grandes. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: #f6f7f9;
+  color: #1f2933;
+}
+
+main {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+h1 {
+  margin: 8px 0 16px;
+  font-size: 1.75rem;
+  color: #d6336c;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.cartao {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.formulario {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #52606d;
+}
+
+input,
+button {
+  font: inherit;
+  font-size: 16px; /* evita o zoom automático do iPhone */
+  padding: 12px;
+  border-radius: 8px;
+}
+
+input {
+  border: 1px solid #cbd2d9;
+  background: #fff;
+  color: #1f2933;
+}
+
+button {
+  border: 0;
+  background: #d6336c;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.erro {
+  background: #ffe3e3;
+  color: #a61e1e;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.total {
+  margin: 0 0 12px;
+}
+
+.vazio {
+  color: #7b8794;
+  margin: 0;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #e4e7eb;
+}
+
+.lista .descricao {
+  display: block;
+  font-weight: 600;
+}
+
+.lista .data {
+  display: block;
+  font-size: 0.85rem;
+  color: #7b8794;
+}
+
+.lista .valor {
+  font-weight: 600;
+  color: #2b8a3e;
+  white-space: nowrap;
+}
