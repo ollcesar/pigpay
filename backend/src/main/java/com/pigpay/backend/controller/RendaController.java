@@ -13,11 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Porta de entrada da API de rendas: recebe os pedidos da tela e responde em JSON.
- * POST /api/rendas  -> cadastra uma renda
- * GET  /api/rendas  -> lista as rendas, da mais recente para a mais antiga
- */
 @RestController
 @RequestMapping("/api/rendas")
 public class RendaController {
@@ -31,7 +26,7 @@ public class RendaController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Renda cadastrar(@Valid @RequestBody Renda renda) {
-        renda.setId(null); // garante que sempre será uma renda nova
+        renda.setId(null);
         return repository.save(renda);
     }
 

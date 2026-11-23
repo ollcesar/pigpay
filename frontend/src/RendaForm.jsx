@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-// Data de hoje no formato AAAA-MM-DD, no fuso do usuário (o formato que o campo de data usa).
 const hoje = () => new Date().toLocaleDateString('sv-SE')
 
 export default function RendaForm({ aoSalvar }) {

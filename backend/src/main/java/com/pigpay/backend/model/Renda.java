@@ -11,10 +11,6 @@ import jakarta.validation.constraints.Positive;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-/**
- * Uma renda recebida pelo usuário (salário, freelance, etc.).
- * A anotação @Entity faz o Spring criar a tabela "renda" no banco H2.
- */
 @Entity
 public class Renda {
 
@@ -26,7 +22,6 @@ public class Renda {
     @Column(nullable = false)
     private String descricao;
 
-    // BigDecimal evita erros de arredondamento com dinheiro (nunca use double).
     @NotNull(message = "O valor é obrigatório")
     @Positive(message = "O valor deve ser maior que zero")
     @Column(nullable = false, precision = 15, scale = 2)
@@ -36,7 +31,6 @@ public class Renda {
     @Column(nullable = false)
     private LocalDate dataRecebimento;
 
-    // O Spring/JPA precisa de um construtor vazio.
     public Renda() {
     }
 
